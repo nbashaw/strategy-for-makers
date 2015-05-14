@@ -2,4 +2,4 @@
 
 Todos
 
-- [ ] Add fastclick.js and test in Chrome for iOS
+- [ ] Use FB and Twitter share tags

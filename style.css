@@ -4,7 +4,7 @@ body {
 }
 .page {
   background: #fff;
-  font-family: Georgia;
+  font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
   position: absolute;
   box-sizing: border-box;
   overflow-x: hidden;
@@ -93,7 +93,19 @@ body {
 .pg-title {
   font-size: 50px;
   line-height: 56px;
+  text-transform: uppercase;
   margin-bottom: 0;
+  letter-spacing: 2px;
+}
+.pg-hero {
+  display: block;
+  margin-top: -10px;
+}
+.pg-why, .pg-hero {
+  font-size: 0.6em;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0px;
 }
 @media (max-width: 640px) {
   .pg-title {

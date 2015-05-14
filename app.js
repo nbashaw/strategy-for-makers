@@ -20,6 +20,9 @@ $(function(){
 
   // Handle click/tap events
   $('html').on('click', function(e) {
+    if (window.getSelection().type === "Range") {
+      return;
+    }
     if (currentPageId !== 0) {
       if ((e.clientX / $(window).width()) > 0.5) {
         renderNextPage();
