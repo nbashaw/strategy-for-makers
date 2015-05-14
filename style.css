@@ -122,8 +122,14 @@ body {
   left: 0;
   width: 100%;
 }
+.pg-kant-container {
+  text-align: center;
+}
+.pg-kant-container figcaption {
+  text-align: center;
+  width: 100%;
+}
 .pg-kant {
-  border-radius: 100%;
-  margin: 0 auto;
+  width: 100%;
 }
 
