@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  background: #fff;
+  font-family: Georgia;
+  position: absolute;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.progress {
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+  font-size: 13px;
+  font-family: 'Helvetica neue', helvetica, sans-serif;
+  color: rgba(125,125,125,0.5);
+  z-index: 1;
+}
+.current-page, .divided {
+  margin-right: -2px;
+}
+
+.back-notice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 70px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 800;
+  font-family: 'Helvetica neue', helvetica, sans-serif;
+  background: rgba(125,125,125,0.5);
+  color: #fff;
+}
+
+/* Desktop styles */
+@media (min-width: 640px) {
+  body {
+    background: #E5E7E6;
+  }
+  .hide-on-desktop { display: none; }
+  .page {
+    width: 600px;
+    height: 600px;
+    margin-top: 50px;
+    border-radius: 7px;
+    left: 50%;
+    margin-left: -300px;
+    padding: 50px 60px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .progress {
+    font-size: 18px;
+    bottom: 10px;
+    right: 10px;
+    font-weight: 500;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .hide-on-mobile { display: none; }
+  .page {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5% 8%;
+    font-size: 17px;
+    line-height: 23px;
+    box-shadow: inset 0px 3px 0px #A30946;
+  }
+}
+
+/* page-specific styles */
+.pg-title {
+  font-size: 50px;
+  line-height: 56px;
+  margin-bottom: 0;
+}
+@media (max-width: 640px) {
+  .pg-title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+.pg-yellow-bg {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #EFE8C5;
+  z-index: -1;
+}
+.pg-porter-photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(/porter-head.png);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+.pg-porter-basics li {
+  margin-bottom: 10px;
+}
+
