@@ -19,7 +19,7 @@ $(function(){
   });
 
   // Handle click/tap events
-  $('body').on('click', function(e) {
+  $('html').on('click', function(e) {
     if (currentPageId !== 0) {
       if ((e.clientX / $(window).width()) > 0.5) {
         renderNextPage();
