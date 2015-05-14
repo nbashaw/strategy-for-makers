@@ -7,8 +7,6 @@ body {
   font-family: Georgia;
   position: absolute;
   box-sizing: border-box;
-  user-select: none;
-  -webkit-user-select: none;
   overflow-x: hidden;
   overflow-y: scroll;
   /*box-shadow: inset 0px 3px 0px #A30946;*/
