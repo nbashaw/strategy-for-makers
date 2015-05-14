@@ -11,7 +11,7 @@ body {
   -webkit-user-select: none;
   overflow-x: hidden;
   overflow-y: scroll;
-  box-shadow: inset 0px 3px 0px #A30946;
+  /*box-shadow: inset 0px 3px 0px #A30946;*/
 }
 
 .progress {
@@ -103,9 +103,6 @@ body {
     line-height: 50px;
   }
 }
-.pg-yellow-bg {
-  background: #EFE8C5;
-}
 .pg-porter-photo {
   position: absolute;
   top: 0;
@@ -124,5 +121,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+}
+.pg-kant {
+  border-radius: 100%;
+  margin: 0 auto;
 }
 

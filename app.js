@@ -1,5 +1,8 @@
 $(function(){
 
+  // Setup Fastclick.js
+  FastClick.attach(document.body);
+
   // Basic setup
   var contentString = $('.js-content')[0].innerHTML;
   contentString = contentString.replace(/\n/g, '<br>');
@@ -16,7 +19,7 @@ $(function(){
   });
 
   // Handle click/tap events
-  $(window).on('click', function(e) {
+  $('body').on('click', function(e) {
     if (currentPageId !== 0) {
       if ((e.clientX / $(window).width()) > 0.5) {
         renderNextPage();
