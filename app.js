@@ -42,7 +42,7 @@ $(function(){
     if (currentPageId < (pageCount - 1)) {
       $('.page[data-order='+currentPageId+']').remove();
       currentPageId += 1;
-      updateProgressbar();
+      updateProgress();
     }
   }
 
@@ -55,14 +55,15 @@ $(function(){
       pageElString += 'style="z-index: -'+prevPageId+'">'+ prevPage +'</div>';
       $('.container').prepend(pageElString);
       currentPageId = currentPageId - 1;
-      updateProgressbar();
+      updateProgress();
       showBackNotice();
     }
   }
 
   // Update Progressbar
-  var updateProgressbar = function() {
+  var updateProgress = function() {
     $('.current-page').text(currentPageId + 1);
+    localStorage['currentPage'] = currentPageId;
   }
 
   // Show Back Notice
@@ -71,6 +72,17 @@ $(function(){
     setTimeout(function(){
       $('.back-notice').fadeOut(500);
     }, 130);
+  }
+
+  // Goto saved page
+  if (localStorage['currentPage'] !== undefined) {
+    currentPageId = parseInt(localStorage['currentPage']);
+    updateProgress();
+    _.each($('.page'), function(pageEl) {
+      if ($(pageEl).data('order') < currentPageId) {
+        $(pageEl).remove();
+      }
+    });
   }
 
 

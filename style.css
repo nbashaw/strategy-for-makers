@@ -81,6 +81,14 @@ body {
 }
 
 /* page-specific styles */
+.pg-bg {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 .pg-title {
   font-size: 50px;
   line-height: 56px;
@@ -93,13 +101,7 @@ body {
   }
 }
 .pg-yellow-bg {
-  position: absolute;
-  top: 2px;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: #EFE8C5;
-  z-index: -1;
 }
 .pg-porter-photo {
   position: absolute;
@@ -113,5 +115,11 @@ body {
 }
 .pg-porter-basics li {
   margin-bottom: 10px;
+}
+.pg-ikea-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
