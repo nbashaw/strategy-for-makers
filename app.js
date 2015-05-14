@@ -10,6 +10,19 @@ $(function(){
   var pageCount = pages.length;
   var currentPageId = 0;
 
+  // Utility - clear selection
+  var clearSelection = function() {
+    if (window.getSelection) {
+      if (window.getSelection().empty) {  // Chrome
+        window.getSelection().empty();
+      } else if (window.getSelection().removeAllRanges) {  // Firefox
+        window.getSelection().removeAllRanges();
+      }
+    } else if (document.selection) {  // IE?
+      document.selection.empty();
+    }
+  }
+
   // Render all pages
   _.each(pages, function(page, index) {
     $('.total-pages').text(pageCount);
@@ -32,6 +45,13 @@ $(function(){
     } else {
       renderNextPage();
     }
+  });
+
+  // Fix the doubleclick bug
+  $(window).on('dblclick', function(e) {
+    clearSelection();
+    e.preventDefault();
+    return;
   });
 
   // Handle keyboard events
