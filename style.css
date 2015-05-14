@@ -55,6 +55,7 @@ body {
     padding: 50px 60px;
     font-size: 18px;
     line-height: 28px;
+
   }
   .progress {
     font-size: 18px;
@@ -99,7 +100,7 @@ body {
 }
 .pg-hero {
   display: block;
-  margin-top: -10px;
+  margin: -10px 0 70px 0;
 }
 .pg-why, .pg-hero {
   font-size: 0.6em;
