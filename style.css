@@ -24,7 +24,6 @@ body {
 .current-page, .divided {
   margin-right: -2px;
 }
-
 .back-notice {
   position: fixed;
   top: 0;
@@ -37,6 +36,9 @@ body {
   font-family: 'Helvetica neue', helvetica, sans-serif;
   background: rgba(125,125,125,0.5);
   color: #fff;
+}
+a {
+  color: #888;
 }
 
 /* Desktop styles */
