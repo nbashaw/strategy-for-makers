@@ -10,19 +10,6 @@ $(function(){
   var pageCount = pages.length;
   var currentPageId = 0;
 
-  // Utility - clear selection
-  var clearSelection = function() {
-    if (window.getSelection) {
-      if (window.getSelection().empty) {  // Chrome
-        window.getSelection().empty();
-      } else if (window.getSelection().removeAllRanges) {  // Firefox
-        window.getSelection().removeAllRanges();
-      }
-    } else if (document.selection) {  // IE?
-      document.selection.empty();
-    }
-  }
-
   // Render all pages
   _.each(pages, function(page, index) {
     $('.total-pages').text(pageCount);
@@ -33,9 +20,8 @@ $(function(){
 
   // Handle click/tap events
   $('html').on('click', function(e) {
-    if (window.getSelection().type === "Range") {
-      return;
-    }
+    if (window.getSelection().type === "Range") {return};
+    if ($(e.target).hasClass('js-prevent-pageturn')) {return};
     if (currentPageId !== 0) {
       if ((e.clientX / $(window).width()) > 0.5) {
         renderNextPage();
@@ -47,15 +33,9 @@ $(function(){
     }
   });
 
-  // Fix the doubleclick bug
-  $(window).on('dblclick', function(e) {
-    clearSelection();
-    e.preventDefault();
-    return;
-  });
-
   // Handle keyboard events
   $(window).on('keyup', function(e) {
+    if ($(document.activeElement).hasClass('js-prevent-pageturn')) {return};
     if (e.keyCode == 39 || e.keyCode == 40) {
       renderNextPage();
     } else if (e.keyCode == 37 || e.keyCode == 38) {
