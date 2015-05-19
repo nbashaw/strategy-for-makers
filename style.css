@@ -18,7 +18,7 @@ body {
   right: 2px;
   font-size: 13px;
   font-family: 'Helvetica neue', helvetica, sans-serif;
-  color: rgba(125,125,125,0.5);
+  color: rgba(125,125,125,0.75);
   z-index: 1;
 }
 .current-page, .divided {
