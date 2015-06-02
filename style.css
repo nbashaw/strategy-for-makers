@@ -110,10 +110,15 @@ a {
 }
 .pg-title {
   font-size: 46px;
-  line-height: 56px;
+  line-height: 55px;
   text-transform: uppercase;
   margin-bottom: 0;
   letter-spacing: 2px;
+}
+.pg-title small {
+  text-transform: none;
+  font-size: 18px;
+  font-style: italic;
 }
 .pg-hero {
   display: block;
@@ -137,8 +142,9 @@ a {
 }
 @media (max-width: 640px) {
   .pg-title {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 43px;
+    letter-spacing: 0;
   }
   .pg-hero {
     font-size: 16px;
