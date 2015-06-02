@@ -48,12 +48,12 @@ a {
   }
   .hide-on-desktop { display: none; }
   .page {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 650px;
     margin-top: 50px;
     border-radius: 7px;
     left: 50%;
-    margin-left: -300px;
+    margin-left: -250px;
     padding: 50px 60px;
     font-size: 18px;
     line-height: 28px;
@@ -84,17 +84,24 @@ a {
 /* page-specific styles */
 .pg-bg {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
 }
+.pg-title-bg {
+  background-image: url(mountains.jpg);
+  background-size: cover;
+  background-position: 50%;
+}
 .pg-title-container {
   text-align: center;
+  color: #fff;
+  padding-top: 60px;
 }
 .pg-title {
-  font-size: 50px;
+  font-size: 46px;
   line-height: 56px;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -105,15 +112,19 @@ a {
   margin: -10px 0 70px 0;
 }
 .pg-why, .pg-hero {
-  font-size: 0.6em;
+  font-size: 20px;
   font-style: italic;
   text-transform: none;
   letter-spacing: 0px;
 }
 @media (max-width: 640px) {
   .pg-title {
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .pg-hero {
+    font-size: 16px;
+    margin-top: 5px;
   }
 }
 .pg-porter-photo {
