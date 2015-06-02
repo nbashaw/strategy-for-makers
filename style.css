@@ -96,7 +96,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -2000;
 }
 .pg-title-bg {
   background-image: url(mountains.jpg);
@@ -156,6 +156,37 @@ a {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   z-index: -1;
+}
+.pg-bottom-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+}
+.pg-physics-container {
+  color: white;
+}
+.pg-physics {
+  margin: 0;
+  padding-left: 15px;
+  border-left: 3px solid #555;
+}
+.pg-question-bg {
+  background-image: url(mountains.jpg);
+  background-position: 0%;
+}
+.pg-question {
+  font-size: 30px;
+  line-height: 38px;
+  color: rgba(255,255,255,0.8);
+  padding-left: 15px;
+  position: relative;
+}
+.pg-question-ldquo {
+  position: absolute;
+  left: 2px;
 }
 .pg-porter-basics li {
   margin-bottom: 10px;
